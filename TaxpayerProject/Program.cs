@@ -48,3 +48,10 @@ foreach (Taxpayers t in taxPayersByDesc)
 {
     Console.WriteLine(t);
 }
+
+List<Taxpayers> taxPayersByDomain = repo.GetByEmailDomain("gmail.com");
+Console.WriteLine("\nAdozók gmail.com domain-el: ");
+foreach (Taxpayers t in taxPayersByDomain)
+{
+    Console.WriteLine(t);
+}

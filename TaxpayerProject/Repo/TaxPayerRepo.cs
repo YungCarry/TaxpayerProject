@@ -26,6 +26,11 @@ namespace TaxpayerProject.Repo
         {
             return context.taxpayer.OrderByDescending(e => e.Amount).ToList();
         }
-        
+
+        public List<Taxpayers> GetByEmailDomain(string domain)
+        {
+            return context.taxpayer.Where(e => e.Email.EndsWith(domain)).ToList();
+        }
+
     }
 }
