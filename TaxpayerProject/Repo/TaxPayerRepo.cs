@@ -12,7 +12,7 @@ namespace TaxpayerProject.Repo
     {
         private readonly TaxpayerContext context = new();
 
-        public  List<Taxpayers> GetAll()
+        public List<Taxpayers> GetAll()
         {
             return context.taxpayer.ToList();
         }
@@ -32,5 +32,11 @@ namespace TaxpayerProject.Repo
             return context.taxpayer.Where(e => e.Email.EndsWith(domain)).ToList();
         }
 
+        public int GetCount()
+        {
+            return context.taxpayer.Count();
+        }
+
+        
     }
 }

@@ -55,3 +55,7 @@ foreach (Taxpayers t in taxPayersByDomain)
 {
     Console.WriteLine(t);
 }
+
+int count = repo.GetCount();
+Console.WriteLine($"\nÖsszes adózó: {count}");
+
